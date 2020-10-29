@@ -1,0 +1,14 @@
+predictedprices1=[100, 25, 24, 39, 54, 62, 64, 82, 107, 130]
+
+profitlist=[]
+
+def findMaxProfit(predictedSharePrices):
+    for x in range(len(predictedSharePrices)):
+        a = predictedSharePrices[x]
+        futurePrices = predictedSharePrices[x+1:]
+        for p in futurePrices:
+            profit = p-a
+            profitlist.append(profit)
+    return max(profitlist)
+    
+    print(findMaxProfit(predictedprices1))
